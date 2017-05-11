@@ -29,7 +29,7 @@
                         tools:src="@drawable/hexo_2"
                         android:scaleType="centerCrop"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="@dimen/detail_photo_height"/>
 
                     <!--<View-->
                         <!--android:layout_width="match_parent"-->
@@ -44,8 +44,8 @@
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="@dimen/detail_card_top_margin"
                     android:background="#fff"
-                    android:elevation="2dp"
                     android:maxWidth="@dimen/detail_card_max_width"
+                    android:elevation="2dp"
                     android:orientation="vertical">
 
                     <LinearLayout
@@ -55,6 +55,7 @@
                         android:layout_gravity="bottom"
                         android:layout_marginBottom="@dimen/detail_metabar_vert_padding"
                         android:background="#333"
+                        tools:background="#981A21"
                         android:orientation="vertical"
                         android:paddingBottom="@dimen/detail_metabar_vert_padding"
                         android:paddingLeft="@dimen/detail_inner_horiz_margin"
@@ -64,6 +65,7 @@
                         <TextView
                             android:id="@+id/article_title"
                             style="?android:attr/textAppearanceLarge"
+                            tools:text="Second Variety"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:fontFamily="sans-serif-condensed"
@@ -76,6 +78,7 @@
                         <TextView
                             android:id="@+id/article_byline"
                             style="?android:attr/textAppearanceSmall"
+                            tools:text="1 May 1953 by Philip K.Dick"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="#8fff"/>
@@ -90,6 +93,7 @@
                         android:layout_marginRight="@dimen/detail_inner_horiz_margin"
                         android:lineSpacingMultiplier="@fraction/detail_body_line_spacing_multiplier"
                         android:paddingBottom="@dimen/detail_body_bottom_margin"
+                        tools:text="@string/test_body"
                         android:textColor="@color/ltgray"
                         android:textColorLink="@color/theme_accent"
                         android:textSize="@dimen/detail_body_text_size"/>
@@ -98,18 +102,17 @@
             </FrameLayout>
         </com.example.xyzreader.ui.ObservableScrollView>
 
-        <ImageButton
+        <android.support.design.widget.FloatingActionButton
             android:id="@+id/share_fab"
-            android:layout_width="56dp"
-            android:layout_height="56dp"
+            app:fabSize="normal"
             android:layout_gravity="bottom|end"
             android:layout_marginBottom="@dimen/fab_margin"
             android:layout_marginRight="@dimen/fab_margin"
-            android:background="@drawable/add_fab_background"
             android:contentDescription="@string/action_share"
-            android:elevation="@dimen/fab_elevation"
             android:src="@drawable/ic_share"
-            android:stateListAnimator="@anim/fab_state_list_anim"/>
+            android:stateListAnimator="@anim/fab_state_list_anim"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"/>
 
     </com.example.xyzreader.ui.DrawInsetsFrameLayout>
 </layout>

@@ -290,12 +290,14 @@ public class ArticleDetailFragment extends BindingFragment<FragmentArticleDetail
         }
 
         bindViews();
+        updateStatusBar();
     }
 
     @Override
     public void onLoaderReset(Loader<Cursor> cursorLoader) {
         mCursor = null;
         bindViews();
+        updateStatusBar();
     }
 
     public int getUpButtonFloor() {
